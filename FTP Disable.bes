@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BES xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BES.xsd">
+	<Analysis>
+		<Title>FTP Disable</Title>
+		<Description><![CDATA[<TABLE>
+<TBODY>
+<TR>
+<TD><BR><BR>To view the Fixlet Message associated with this task use the following link: <?relevance links of bes fixlets whose (fixlet flag of it and mime field "x-fixlet-scm-id" of it = "9fa41b1e-41c7-2491-df07-fc33b3573e98" AND (if (custom site flag of site of current fixlet) then name of site of it = name of site of current fixlet else id of site of it = id of site of current fixlet) of it)?></TD></TR></TBODY></TABLE>]]></Description>
+		<Relevance>true</Relevance>
+		<MIMEField>
+			<Name>x-fixlet-scm-analysis-id</Name>
+			<Value>0e26b128-857b-5886-1784-aad4705dea0d</Value>
+		</MIMEField>
+		<MIMEField>
+			<Name>x-fixlet-scm-metadata</Name>
+			<Value>{"scm_parameters":{"properties":{"1":{"type":"string","description":""}}}}</Value>
+		</MIMEField>
+		<MIMEField>
+			<Name>x-fixlet-modification-time</Name>
+			<Value>Fri, 27 Apr 2018 23:13:33 +0000</Value>
+		</MIMEField>
+		<Domain>SCVM</Domain>
+		<Property Name="FTP Service" ID="1" EvaluationPeriod="PT12H"><![CDATA[if exists service "ftpsvc" then "FTP service " & ((start type of it, state of it) of service "ftpsvc") as string else "FTP service does not exists"]]></Property>
+	</Analysis>
+</BES>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BES xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BES.xsd">
+	<Analysis>
+		<Title>Maximum Event Log Size - Security Log</Title>
+		<Description><![CDATA[<TABLE>
+<TBODY>
+<TR>
+<TD><BR><BR>To view the Fixlet Message associated with this task use the following link: <?relevance links of bes fixlets whose (fixlet flag of it and mime field "x-fixlet-scm-id" of it = "8ec1995d-c9ed-0189-2c53-09a1db427530" AND (if (custom site flag of site of current fixlet) then name of site of it = name of site of current fixlet else id of site of it = id of site of current fixlet) of it)?></TD></TR></TBODY></TABLE>]]></Description>
+		<Relevance>true</Relevance>
+		<MIMEField>
+			<Name>x-fixlet-scm-analysis-id</Name>
+			<Value>6c3298a1-493d-731a-6e2a-a4a5f8619739</Value>
+		</MIMEField>
+		<MIMEField>
+			<Name>x-fixlet-scm-metadata</Name>
+			<Value>{"scm_parameters":{"properties":{"1":{"type":"string","description":""}}}}</Value>
+		</MIMEField>
+		<MIMEField>
+			<Name>x-fixlet-modification-time</Name>
+			<Value>Fri, 27 Apr 2018 23:13:33 +0000</Value>
+		</MIMEField>
+		<Domain>SCVM</Domain>
+		<Property Name="Maximum Event Log Size - Security Log" ID="1" EvaluationPeriod="PT12H"><![CDATA[(item 0 of it & " : " & item 1 of it) of (item 1 of it, ((item 0 of it & " : " & item 1 of it) of (name of it, (item 0 of it & " : " & item 1 of it) of (if exists key "SYSTEM\CurrentControlSet\Services\EventLog\Security" of it then ((if exists value "MaxSize" of it then ((types of it as string) of values "MaxSize" of it, (concatenation "," of substrings separated by "%00" of it) of (if it ends with "%00%00" then preceding text of last "%00%00" of it else if it ends with "%00" then preceding text of last "%00" of it else it) of ((values "MaxSize" of it) as string)) else ("<no type>", "<no value>")) of key "SYSTEM\CurrentControlSet\Services\EventLog\Security" of it) else ("<no type>", "<no key>"))) of keys "HKEY_LOCAL_MACHINE" of item 0 of it)) of (if x64 of operating system then ((x64 registry, "x64"); (x32 registry, "x32")) else (x32 registry, "x32"))]]></Property>
+	</Analysis>
+</BES>

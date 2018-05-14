@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BES xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BES.xsd">
+	<Analysis>
+		<Title>Account lockout duration</Title>
+		<Description><![CDATA[<TABLE>
+<TBODY>
+<TR>
+<TD><BR><BR>To view the Fixlet Message associated with this task use the following link: <?relevance links of bes fixlets whose (fixlet flag of it and mime field "x-fixlet-scm-id" of it = "a64bccb7-3b3c-1ae8-471d-8e8f075dc8c6" AND (if (custom site flag of site of current fixlet) then name of site of it = name of site of current fixlet else id of site of it = id of site of current fixlet) of it)?></TD></TR></TBODY></TABLE>]]></Description>
+		<Relevance>true</Relevance>
+		<MIMEField>
+			<Name>x-fixlet-scm-analysis-id</Name>
+			<Value>8be857bf-8fc0-608b-92df-ad4ce9b4b318</Value>
+		</MIMEField>
+		<MIMEField>
+			<Name>x-fixlet-scm-metadata</Name>
+			<Value>{"scm_parameters":{"properties":{"1":{"type":"string","description":""}}}}</Value>
+		</MIMEField>
+		<MIMEField>
+			<Name>x-fixlet-modification-time</Name>
+			<Value>Fri, 27 Apr 2018 23:13:33 +0000</Value>
+		</MIMEField>
+		<Domain>SCVM</Domain>
+		<Property Name="Account lockout duration" ID="1" EvaluationPeriod="PT12H">(if exist account lockout duration of it then account lockout duration of it else 0 * second) of security database</Property>
+	</Analysis>
+</BES>

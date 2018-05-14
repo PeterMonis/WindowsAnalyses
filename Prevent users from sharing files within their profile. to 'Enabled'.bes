@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BES xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BES.xsd">
+	<Analysis>
+		<Title>Prevent users from sharing files within their profile. to 'Enabled'</Title>
+		<Description><![CDATA[<TABLE><TBODY><TR><TD><BR><BR>To view the Fixlet Message associated with this task use the following link: <?relevance links of bes fixlets whose (fixlet flag of it and mime field "x-fixlet-scm-id" of it = "c128ad5f-c8f6-35e6-8a4b-2c2d52acdbfe" AND (if (custom site flag of site of current fixlet) then name of site of it = name of site of current fixlet else id of site of it = id of site of current fixlet) of it)?></TD></TR></TBODY></TABLE>]]></Description>
+		<Relevance>true</Relevance>
+		<MIMEField>
+			<Name>x-fixlet-scm-analysis-id</Name>
+			<Value>1c0a8c5c-bdb6-656e-57db-1e117ca29427</Value>
+		</MIMEField>
+		<MIMEField>
+			<Name>x-fixlet-scm-metadata</Name>
+			<Value>{"scm_parameters":{"properties":{"1":{"type":"string","description":""}}}}</Value>
+		</MIMEField>
+		<MIMEField>
+			<Name>x-fixlet-modification-time</Name>
+			<Value>Fri, 27 Apr 2018 23:13:33 +0000</Value>
+		</MIMEField>
+		<Domain>SCVM</Domain>
+		<Property Name="Setting:" ID="1" EvaluationPeriod="PT12H">(values "NoInPlaceSharing" of it) of (keys "Software\Microsoft\Windows\CurrentVersion\Policies\Explorer" of it) of it whose (exists matches (regex "^S-1-5-21-[0-9]+-[0-9]+-[0-9]+-[0-9]{3,}$") of name of it) of keys of keys "HKEY_USERS" of native registry</Property>
+	</Analysis>
+</BES>

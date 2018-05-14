@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BES xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BES.xsd">
+	<Analysis>
+		<Title>Reset account lockout after</Title>
+		<Description><![CDATA[<TABLE>
+<TBODY>
+<TR>
+<TD><BR><BR>To view the Fixlet Message associated with this task use the following link: <?relevance links of bes fixlets whose (fixlet flag of it and mime field "x-fixlet-scm-id" of it = "d88566ae-d1c0-689b-342b-f3a8718d7585" AND (if (custom site flag of site of current fixlet) then name of site of it = name of site of current fixlet else id of site of it = id of site of current fixlet) of it)?></TD></TR></TBODY></TABLE>]]></Description>
+		<Relevance>true</Relevance>
+		<MIMEField>
+			<Name>x-fixlet-scm-analysis-id</Name>
+			<Value>40deb008-215d-1575-482f-3068a268f022</Value>
+		</MIMEField>
+		<MIMEField>
+			<Name>x-fixlet-scm-metadata</Name>
+			<Value>{"scm_parameters":{"properties":{"1":{"type":"string","description":""}}}}</Value>
+		</MIMEField>
+		<MIMEField>
+			<Name>x-fixlet-modification-time</Name>
+			<Value>Fri, 27 Apr 2018 23:13:33 +0000</Value>
+		</MIMEField>
+		<Domain>SCVM</Domain>
+		<Property Name="Reset account lockout after" ID="1" EvaluationPeriod="PT12H">(if exist account lockout observation window of it then account lockout observation window of it else 31536000000 * second) of security database</Property>
+	</Analysis>
+</BES>

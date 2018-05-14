@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BES xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BES.xsd">
+	<Analysis>
+		<Title>UNIX subsystem application support</Title>
+		<Description><![CDATA[<TABLE>
+<TBODY>
+<TR>
+<TD><BR><BR>To view the Fixlet Message associated with this task use the following link: <?relevance links of bes fixlets whose (fixlet flag of it and mime field "x-fixlet-scm-id" of it = "8776e1be-904b-eb23-fc6d-ed38b94a68ed" AND (if (custom site flag of site of current fixlet) then name of site of it = name of site of current fixlet else id of site of it = id of site of current fixlet) of it)?></TD></TR></TBODY></TABLE>]]></Description>
+		<Relevance>true</Relevance>
+		<MIMEField>
+			<Name>x-fixlet-scm-analysis-id</Name>
+			<Value>8cd2e7a5-6b0d-5199-aeb4-ce23691ed2e6</Value>
+		</MIMEField>
+		<MIMEField>
+			<Name>x-fixlet-scm-metadata</Name>
+			<Value>{"scm_parameters":{"properties":{"1":{"type":"string","description":""}}}}</Value>
+		</MIMEField>
+		<MIMEField>
+			<Name>x-fixlet-modification-time</Name>
+			<Value>Fri, 27 Apr 2018 23:13:33 +0000</Value>
+		</MIMEField>
+		<Domain>SCVM</Domain>
+		<Property Name="UNIX subsystem application support" ID="1" EvaluationPeriod="PT12H"><![CDATA[(item 0 of it & " : " & item 1 of it) of (item 1 of it, ((item 0 of it & " : " & item 1 of it) of (name of it, (item 0 of it & " : " & item 1 of it) of (if exists key "SYSTEM\CurrentControlSet\Control\Session Manager\SubSystems" of it then ((if exists value "Optional" of it then ((types of it as string) of values "Optional" of it, (concatenation "," of substrings separated by "%00" of it) of (if it ends with "%00%00" then preceding text of last "%00%00" of it else if it ends with "%00" then preceding text of last "%00" of it else it) of ((values "Optional" of it) as string)) else ("<no type>", "<no value>")) of key "SYSTEM\CurrentControlSet\Control\Session Manager\SubSystems" of it) else ("<no type>", "<no key>"))) of keys "HKEY_LOCAL_MACHINE" of item 0 of it)) of (if x64 of operating system then ((x64 registry, "x64"); (x32 registry, "x32")) else (x32 registry, "x32"))]]></Property>
+	</Analysis>
+</BES>

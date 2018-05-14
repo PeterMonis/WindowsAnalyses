@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BES xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BES.xsd">
+	<Analysis>
+		<Title>Network access: Allow anonymous SID/Name translation to 'Disabled'</Title>
+		<Description><![CDATA[<TABLE><TBODY><TR><TD><BR><BR>To view the Fixlet Message associated with this task use the following link: <?relevance links of bes fixlets whose (fixlet flag of it and mime field "x-fixlet-scm-id" of it = "daeb6399-1f5c-f044-3294-903d48ace2a9" AND (if (custom site flag of site of current fixlet) then name of site of it = name of site of current fixlet else id of site of it = id of site of current fixlet) of it)?></TD></TR></TBODY></TABLE>]]></Description>
+		<Relevance>true</Relevance>
+		<MIMEField>
+			<Name>x-fixlet-scm-analysis-id</Name>
+			<Value>eaa127b7-3c1b-61be-6b96-ab101372b431</Value>
+		</MIMEField>
+		<MIMEField>
+			<Name>x-fixlet-scm-metadata</Name>
+			<Value>{"scm_parameters":{"properties":{"1":{"type":"string","description":""}}}}</Value>
+		</MIMEField>
+		<MIMEField>
+			<Name>x-fixlet-modification-time</Name>
+			<Value>Fri, 27 Apr 2018 23:13:33 +0000</Value>
+		</MIMEField>
+		<Domain>SCVM</Domain>
+		<Property Name="Setting:" ID="1" EvaluationPeriod="PT12H"><![CDATA[(if exist selects "Setting from RSOP_SecuritySettingBoolean where KeyName=%22lsaanonymousnamelookup%22 and Precedence=1" of it then ((if it then 1 else 0) of boolean value of selects ((if exist matches (case insensitive regex "RSOP_Security") of it then ((if not (x64 of it and name of it = "WinVista" and service pack major version of it = 0) of operating system then it else error "52903: WMI query not supported under Vista x64 SP0: " & it)) else it) of "Setting from RSOP_SecuritySettingBoolean where KeyName=%22lsaanonymousnamelookup%22 and Precedence=1") of it) else (if exists key "HKEY_LOCAL_MACHINE\SECURITY\Policy\SecDesc" of it then ((if it then 1 else 0) of (not bit 0 of it) of (hexadecimal integer it) of concatenation of characters (56; 57) of (default value of key "HKEY_LOCAL_MACHINE\SECURITY\Policy\SecDesc" of it as string)) else 0) of x32 registry) of wmi "root\RSOP\Computer"]]></Property>
+	</Analysis>
+</BES>
